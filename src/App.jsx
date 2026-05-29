@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import TechHub from './components/TechHub';
 import Staff from './components/companylife/Staff'; 
+import Gallery from './components/companylife/Gallery'; // 🎯 Mapped strictly with lowercase folder
 import Clients from './components/Clients';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -37,8 +38,11 @@ function App() {
             {/* Main Home Route */}
             <Route path="/" element={<MainLandingPage />} />
             
-            {/* 🎯 Staff Page Route: Is par click karte hi independent clear page khulega */}
+            {/* 🎯 Staff Page Route */}
             <Route path="/staff" element={<Staff />} />
+
+            {/* 🎯 Gallery Page Route */}
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
 
