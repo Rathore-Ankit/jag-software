@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  /* Premium Deep Corporate Navy Blue Base Colors */
+  --color-techDark: #0a1128;       /* Rich Deep Navy Blue Background */
+  --color-techSurface: #1c2541;    /* Sleek Dark Slate Blue for Cards and Sub-menus */
+  
+  /* Brand Accents Accurately Configured */
+  --color-brandRed: #dc2626;       /* Company Logo Red */
+  --color-brandRedGlow: #ef4444;   /* Radiant Hover Red */
+  --color-techSky: #38bdf8;        /* Light Ice Blue Accent for Subtitles & Highlights */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--color-techDark);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Customized Scrollbar to Match the Navy Theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2541;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8; /* Smooth Sky Blue hover trace */
+}
