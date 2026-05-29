@@ -18,7 +18,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-techDark/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold tracking-wider text-white">
-          JAG<span className="text-brandRed font-extrabold drop-shadow-[0_0_10px_rgba(220,38,38,0.3)]">SOFTWARE</span>
+          JAG <span className="text-brandRed font-extrabold drop-shadow-[0_0_10px_rgba(220,38,38,0.3)]">SOFTWARE</span>
         </div>
         
         {/* Desktop Navigation */}
