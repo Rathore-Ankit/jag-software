@@ -1,32 +1,51 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import TechHub from './components/TechHub';
+import Staff from './components/companylife/Staff'; 
 import Clients from './components/Clients';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer'; 
 import WhatsAppToggle from "./components/WhatsAppToggle";
-import EnquiryModal from "./components/EnquiryModal"; // <-- 1. Modal Component Import Kiya
+import EnquiryModal from "./components/EnquiryModal"; 
+
+// 🎯 Main Landing Page Layout
+const MainLandingPage = () => (
+  <>
+    <Hero />
+    <Services />
+    <TechHub />
+    <Clients />
+    <Testimonials />
+    <Contact />
+  </>
+);
 
 function App() {
   return (
-    <div className="min-h-screen bg-techDark text-gray-100 selection:bg-brandRed selection:text-white antialiased">
-      <Navbar />
-      <EnquiryModal /> {/* <-- 2. Modal Core Framework Block Attach Kiya */}
-      
-      <main className="pt-4">
-        <Hero />
-        <Services />
-        <TechHub />
-        <Clients />
-        <Testimonials />
-        <Contact />
+    <Router>
+      <div className="min-h-screen bg-techDark text-gray-100 selection:bg-brandRed selection:text-white antialiased relative">
+        {/* Global Components Layout */}
+        <Navbar />
+        <EnquiryModal /> 
+        
+        <main className="pt-20 relative z-10">
+          <Routes>
+            {/* Main Home Route */}
+            <Route path="/" element={<MainLandingPage />} />
+            
+            {/* 🎯 Staff Page Route: Is par click karte hi independent clear page khulega */}
+            <Route path="/staff" element={<Staff />} />
+          </Routes>
+        </main>
+
         <Footer /> 
         <WhatsAppToggle />
-      </main>
-    </div>
+      </div>
+    </Router>
   );
 }
 
