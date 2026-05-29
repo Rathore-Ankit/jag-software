@@ -123,16 +123,7 @@ function Contact() {
         </div>
       </div>
 
-      {/* FOOTER SECTION */}
-      <footer className="mt-20 pt-8 border-t border-white/5 text-center flex flex-col items-center gap-4">
-        <div className="border border-white/10 px-5 py-2.5 rounded-xl bg-techSurface/50 flex items-center gap-3">
-          <div className="w-6 h-6 bg-brandRed rounded-md flex items-center justify-center font-black text-xs text-white">J</div>
-          <span className="text-sm font-black text-white tracking-wider">JAG <span className="text-gray-400 font-normal text-xs ml-1">Software Solutions Private Limited</span></span>
-        </div>
-        <p className="text-[10px] text-gray-500 tracking-wider uppercase font-medium">
-          © JAG Software Solutions Private Limited - All right reserved
-        </p>
-      </footer>
+     
 
     </section>
   );

@@ -4,8 +4,9 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import TechHub from './components/TechHub';
 import Clients from './components/Clients';
-import Testimonials from './components/Testimonials'; // <-- Naya Import Here
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Footer from './components/Footer'; // <-- 1. Naya Import Yahan Kiya
 import WhatsAppToggle from "./components/WhatsAppToggle";
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
         <Services />
         <TechHub />
         <Clients />
-        <Testimonials /> {/* <-- Naya Testimonial Module Attached */}
+        <Testimonials />
         <Contact />
+        <Footer /> {/* <-- 2. Footer Yahan Attach Kiya */}
         <WhatsAppToggle />
       </main>
     </div>
