@@ -3,23 +3,36 @@ import React, { useState } from 'react';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
- const navItems = [
+  const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
     { label: "Products", href: "#products" },
     { label: "Solutions", href: "#solutions" },
     { label: "Technologies", href: "#technologies" },
     { label: "Clients", href: "#clients" },
-    { label: "Reviews", href: "#testimonials" }, // <-- Naya Link Target
+    { label: "Reviews", href: "#testimonials" }, 
     { label: "About", href: "#about" }
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-techDark/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold tracking-wider text-white">
-          JAG <span className="text-brandRed font-extrabold drop-shadow-[0_0_10px_rgba(220,38,38,0.3)]">SOFTWARE</span>
-        </div>
+        
+        {/* BRAND IDENTITY: Logo and Text combined into a clean flex container */}
+        <a href="#home" className="flex items-center gap-3 group focus:outline-none">
+          {/* Logo image fetching from the public root folder */}
+          <img 
+            src="/Jaglogo.png" 
+            alt="JAG Logo" 
+            className="h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            onError={(e) => {
+              // Fallback protection block to hide broken layouts if naming casing differs
+              e.target.style.display = 'none';
+            }}
+          />
+          
+          
+        </a>
         
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">

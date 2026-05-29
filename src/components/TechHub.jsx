@@ -2,13 +2,36 @@ import React from 'react';
 
 function TechHub() {
   const products = [
-    { name: "eFabrication", subtitle: "Optimize Resources", src: "https://cdn-icons-png.flaticon.com/512/993/993928.png", desc: "Resource optimization solutions built specifically for heavy fabrication centers to minimize scrap and maximize asset utilization." },
-    { name: "EDI", subtitle: "Electronic Data Interchange", src: "https://cdn-icons-png.flaticon.com/512/2885/2885417.png", desc: "High-speed B2B communication gateways automating logistics and shipping bills seamlessly across global networks." },
-    { name: "ePearl", subtitle: "Logistics Solution", src: "https://cdn-icons-png.flaticon.com/512/2897/2897785.png", desc: "Our flagship cargo and container stuffing optimization ecosystem built for international freight forwarders." },
-    { name: "eTrans", subtitle: "Transport Management", src: "https://cdn-icons-png.flaticon.com/512/411/411763.png", desc: "Comprehensive software architecture engineered to streamline fleet management and automated bill generation reports." }
+    { 
+      name: "eFabrication", 
+      subtitle: "Optimize Resources", 
+      src: "/efabrication.png", 
+      desc: "Resource optimization solutions built specifically for heavy fabrication centers to minimize scrap and maximize asset utilization.",
+      targetHref: "#" // Directly redirects back to the main top Home section
+    },
+    { 
+      name: "EDI", 
+      subtitle: "Electronic Data Interchange", 
+      src: "/edi.png", 
+      desc: "High-speed B2B communication gateways automating logistics and shipping bills seamlessly across global networks.",
+      targetHref: "#"
+    },
+    { 
+      name: "ePearl", 
+      subtitle: "Logistics Solution", 
+      src: "/epearl.png", 
+      desc: "Our flagship cargo and container stuffing optimization ecosystem built for international freight forwarders.",
+      targetHref: "#"
+    },
+    { 
+      name: "eTrans", 
+      subtitle: "Transport Management", 
+      src: "/etrans.png", 
+      desc: "Comprehensive software architecture engineered to streamline fleet management and automated bill generation reports.",
+      targetHref: "#"
+    }
   ];
 
-  // Upgraded technologies matrix with premium, verified high-contrast logos
   const technologies = [
     { 
       name: "Microsoft .NET Eco", 
@@ -49,7 +72,7 @@ function TechHub() {
     { 
       name: "Magic Software Platform", 
       type: "img",
-      src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", // Using high-contrast enterprise platform vector
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", 
       desc: "Metadata-driven business integration framework providing unmatched declarative logic development efficiency." 
     }
   ];
@@ -72,14 +95,24 @@ function TechHub() {
                   <img 
                     src={prod.src} 
                     alt={prod.name} 
-                    className="max-h-20 object-contain transition-all duration-300 group-hover:scale-110" 
+                    className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover:scale-110" 
+                    onError={(e) => {
+                      e.target.style.opacity = '0.3';
+                    }}
                   />
                 </div>
                 <span className="text-[10px] text-techSky font-bold uppercase tracking-wider">{prod.subtitle}</span>
                 <h3 className="text-xl font-bold text-white mt-1 mb-2">{prod.name}</h3>
                 <p className="text-gray-400 text-xs leading-relaxed">{prod.desc}</p>
               </div>
-              <div className="text-xs text-brandRed font-bold mt-4 cursor-pointer hover:underline flex items-center gap-1">Explore Core →</div>
+              
+              {/* Anchor tag seamlessly redirecting back to top Home section */}
+              <a 
+                href={prod.targetHref} 
+                className="text-xs text-brandRed font-bold mt-4 hover:underline flex items-center gap-1 w-fit select-none focus:outline-none"
+              >
+                Explore Core →
+              </a>
             </div>
           ))}
         </div>
@@ -115,14 +148,10 @@ function TechHub() {
           <div className="w-20 h-1 bg-brandRed mx-auto mt-4"></div>
         </div>
 
-        {/* 3 Columns Layout with smooth hover transitions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech, tIdx) => (
             <div key={tIdx} className="bg-techSurface border border-white/[0.02] rounded-2xl p-6 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-brandRed/10 hover:border-brandRed/30 transition-all duration-300 group">
-              
-              {/* Upgraded High-Contrast White Background Box for pristine image visibility */}
               <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center overflow-hidden mb-5 shadow-lg p-2.5 transform group-hover:rotate-6 transition-transform duration-300">
-                
                 {tech.type === "img" ? (
                   <img 
                     src={tech.src} 
@@ -134,10 +163,7 @@ function TechHub() {
                     {tech.src}
                   </div>
                 )}
-
               </div>
-              
-              {/* Proper crisp typographic titles */}
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-techSky transition-colors">{tech.name}</h3>
               <p className="text-gray-400 text-xs leading-relaxed">{tech.desc}</p>
             </div>

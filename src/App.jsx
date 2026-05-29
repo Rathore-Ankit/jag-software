@@ -6,13 +6,15 @@ import TechHub from './components/TechHub';
 import Clients from './components/Clients';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import Footer from './components/Footer'; // <-- 1. Naya Import Yahan Kiya
+import Footer from './components/Footer'; 
 import WhatsAppToggle from "./components/WhatsAppToggle";
+import EnquiryModal from "./components/EnquiryModal"; // <-- 1. Modal Component Import Kiya
 
 function App() {
   return (
     <div className="min-h-screen bg-techDark text-gray-100 selection:bg-brandRed selection:text-white antialiased">
       <Navbar />
+      <EnquiryModal /> {/* <-- 2. Modal Core Framework Block Attach Kiya */}
       
       <main className="pt-4">
         <Hero />
@@ -21,7 +23,7 @@ function App() {
         <Clients />
         <Testimonials />
         <Contact />
-        <Footer /> {/* <-- 2. Footer Yahan Attach Kiya */}
+        <Footer /> 
         <WhatsAppToggle />
       </main>
     </div>

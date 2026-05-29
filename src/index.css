@@ -12,9 +12,7 @@
   box-sizing: border-box;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
   background-color: var(--color-techDark);

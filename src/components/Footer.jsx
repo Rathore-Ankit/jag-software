@@ -19,7 +19,7 @@ function Footer() {
         {/* Left Side: Copyright & Logo */}
         <div className="flex items-center gap-3 order-2 md:order-1">
           <div className="w-5 h-5 bg-brandRed rounded flex items-center justify-center font-black text-[10px] text-white">
-            J
+            JAG 
           </div>
           <p className="font-medium">
             © 2026 JAG Software, Inc. <span className="hidden md:inline text-gray-700">|</span> <span className="md:hidden block mt-1 text-[10px] text-gray-600">Footer navigation</span>
