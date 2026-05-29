@@ -34,6 +34,15 @@ function Testimonials() {
       company: "i Cargo Alliance",
       src: "/cargo-allianceT.png",
       review: "Exceptional technical consulting and outsourcing capability. From secure database schemas to responsive web DOM structures, JAG Software delivers pure enterprise engineering excellence."
+    },
+
+    {
+      id: 5,
+      name: "Mr. Manish Pradhan ",
+      designation: "Chief Executive Officer",
+      company: "Travezee",
+      src: "/travezeeT.png",
+      review: "Exceptional technical consulting and outsourcing capability. From secure database schemas to responsive web DOM structures, JAG Software delivers pure enterprise engineering excellence."
     }
   ];
 

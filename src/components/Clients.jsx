@@ -5,7 +5,8 @@ function Clients() {
     { name: "CP WORLD", src: "/cpworld.png", fallback: "🌐" },
     { name: "TOTAL TRANSPORT SYSTEMS", src: "/total-transport.png", fallback: "🚢" },
     { name: "SJ SHIPPING", src: "/sj-shipping.png", fallback: "⚓" },
-    { name: "CARGO ALLIANCE", src: "/cargo-alliance.png", fallback: "📦" }
+    { name: "CARGO ALLIANCE", src: "/cargo-alliance.png", fallback: "📦" },
+    { name: "TRAVEZEE", src: "/travezee.png", fallback: "✈️" } // <-- Naya Client Add Kiya
   ];
 
   return (
@@ -17,8 +18,8 @@ function Clients() {
         <div className="w-16 h-1 bg-brandRed mx-auto mt-3"></div>
       </div>
 
-      {/* Grid of Images matching image_00ce55.png layout */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+      {/* Grid structure dynamically switches columns for 5 items symmetry on large screens */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center">
         {clientLogos.map((client, idx) => (
           <div 
             key={idx} 
@@ -35,7 +36,7 @@ function Clients() {
                 e.target.nextSibling.style.display = 'block';
               }}
             />
-            <div className="hidden text-center text-techDark font-bold text-xs">
+            <div className="hidden text-center text-slate-800 font-bold text-xs">
               <span className="text-xl block mb-1">{client.fallback}</span>
               {client.name}
             </div>
