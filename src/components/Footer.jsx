@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   const footerLinks = [
     { name: 'Terms', href: '#' },
-    { name: 'Privacy', href: '#' },
+    { name: 'Privacy 222', href: '#' },
     { name: 'Security', href: '#' },
     { name: 'Status', href: '#' },
     { name: 'Docs', href: '#' },
