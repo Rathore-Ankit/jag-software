@@ -6,6 +6,7 @@ import TechHub from './components/TechHub';
 import Clients from './components/Clients';
 import Testimonials from './components/Testimonials'; // <-- Naya Import Here
 import Contact from './components/Contact';
+import WhatsAppToggle from "./components/WhatsAppToggle";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Clients />
         <Testimonials /> {/* <-- Naya Testimonial Module Attached */}
         <Contact />
+        <WhatsAppToggle />
       </main>
     </div>
   );

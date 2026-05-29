@@ -88,7 +88,7 @@ function Contact() {
             <div className="pt-6 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div>
                 <span className="block text-gray-500 font-bold uppercase tracking-wider text-[10px]">Corporate Phone Lines</span>
-                <p className="text-gray-200 mt-1 font-semibold tracking-wide">+91-22-25910316</p>
+                <p className="text-gray-200 mt-1 font-semibold tracking-wide">+91 76663 03554</p>
                 <p className="text-gray-200 font-semibold tracking-wide">+91-22-25910317</p>
                 <p className="text-gray-200 font-semibold tracking-wide">+91-22-25910318</p>
               </div>
