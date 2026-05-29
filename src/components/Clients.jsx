@@ -6,7 +6,7 @@ function Clients() {
     { name: "TOTAL TRANSPORT SYSTEMS", src: "/total-transport.png", fallback: "🚢" },
     { name: "SJ SHIPPING", src: "/sj-shipping.png", fallback: "⚓" },
     { name: "CARGO ALLIANCE", src: "/cargo-alliance.png", fallback: "📦" },
-    { name: "TRAVEZEE", src: "/travezee.png", fallback: "✈️" } // <-- Naya Client Add Kiya
+    { name: "TRAVEZEE", src: "/travezee.png", fallback: "✈️" }
   ];
 
   return (
@@ -18,20 +18,21 @@ function Clients() {
         <div className="w-16 h-1 bg-brandRed mx-auto mt-3"></div>
       </div>
 
-      {/* Grid structure dynamically switches columns for 5 items symmetry on large screens */}
+      {/* Grid wrapper */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center">
         {clientLogos.map((client, idx) => (
           <div 
             key={idx} 
-            className="bg-white rounded-xl p-6 h-32 flex items-center justify-center border border-transparent hover:border-brandRed/30 shadow-md transition-all duration-300 group"
+            /* Added hover:-translate-y-2, hover:shadow-2xl, and hover:border-brandRed/40 for smooth interactive lift */
+            className="bg-white rounded-xl p-6 h-32 flex items-center justify-center border border-transparent shadow-md transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-brandRed/10 hover:border-brandRed/40 group cursor-pointer"
           >
             {/* Image tag looking into the public directory */}
             <img 
               src={client.src} 
               alt={client.name}
-              className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+              /* Added hover:scale-105 to give a slight zoom to the logo inside */
+              className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 transform group-hover:scale-105"
               onError={(e) => {
-                // Agar aapne abhi image nahi daali hai, toh crash hone ke bajay text/icon dikhega
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'block';
               }}

@@ -8,7 +8,7 @@ function TechHub() {
     { name: "eTrans", subtitle: "Transport Management", src: "https://cdn-icons-png.flaticon.com/512/411/411763.png", desc: "Comprehensive software architecture engineered to streamline fleet management and automated bill generation reports." }
   ];
 
-  // Technologies matrix with dedicated SVG components to prevent network drop errors
+  // Upgraded technologies matrix with premium, verified high-contrast logos
   const technologies = [
     { 
       name: "Microsoft .NET Eco", 
@@ -31,12 +31,11 @@ function TechHub() {
     { 
       name: "AI & Predictive Radar", 
       type: "svg",
-      // Bulletproof high-tech inline custom geometric brain/AI grid icon
       src: (
-        <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-brandRed" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10 text-brandRed" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
           <path d="M12 6v12M6 12h12"/>
-          <circle cx="12" cy="12" r="3" fill="currentColor" className="opacity-20" />
+          <circle cx="12" cy="12" r="4" fill="currentColor" className="opacity-30" />
         </svg>
       ),
       desc: "Next-gen machine learning layers running container cargo forecasting, optimized route patterns, and predictive stuffing models." 
@@ -50,7 +49,7 @@ function TechHub() {
     { 
       name: "Magic Software Platform", 
       type: "img",
-      src: "https://cdn-icons-png.flaticon.com/512/5968/5968322.png", 
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg", // Using high-contrast enterprise platform vector
       desc: "Metadata-driven business integration framework providing unmatched declarative logic development efficiency." 
     }
   ];
@@ -67,20 +66,20 @@ function TechHub() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((prod, idx) => (
-            <div key={idx} className="bg-techSurface border border-white/[0.02] rounded-2xl p-5 flex flex-col justify-between hover:border-brandRed/30 transition-all group">
+            <div key={idx} className="bg-techSurface border border-white/[0.02] rounded-2xl p-5 flex flex-col justify-between transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-brandRed/10 hover:border-brandRed/30 transition-all duration-300 group">
               <div>
-                <div className="w-full h-32 bg-techDark border border-white/5 rounded-xl flex items-center justify-center overflow-hidden mb-4 bg-linear-to-b from-brandRed/5 to-transparent">
+                <div className="w-full h-32 bg-white rounded-xl flex items-center justify-center overflow-hidden mb-4 shadow-inner p-4">
                   <img 
                     src={prod.src} 
                     alt={prod.name} 
-                    className="max-h-16 object-contain filter invert opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" 
+                    className="max-h-20 object-contain transition-all duration-300 group-hover:scale-110" 
                   />
                 </div>
-                <span className="text-[10px] text-brandRed font-bold uppercase tracking-wider">{prod.subtitle}</span>
+                <span className="text-[10px] text-techSky font-bold uppercase tracking-wider">{prod.subtitle}</span>
                 <h3 className="text-xl font-bold text-white mt-1 mb-2">{prod.name}</h3>
                 <p className="text-gray-400 text-xs leading-relaxed">{prod.desc}</p>
               </div>
-              <div className="text-xs text-brandRed font-bold mt-4 cursor-pointer hover:underline">Explore Core →</div>
+              <div className="text-xs text-brandRed font-bold mt-4 cursor-pointer hover:underline flex items-center gap-1">Explore Core →</div>
             </div>
           ))}
         </div>
@@ -100,7 +99,7 @@ function TechHub() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {["Onsite requirement matrix evaluation.", "Freeze scope profiles maintaining rigorous verification workflows.", "System analysis mapping using modular relational database schemas.", "Deploy framework prototypes utilizing optimized baseline templates."].map((step, sIdx) => (
-              <div key={sIdx} className="bg-techDark/50 border border-white/5 rounded-xl p-4 text-xs text-gray-400 flex items-start gap-3">
+              <div key={sIdx} className="bg-techDark border border-white/5 rounded-xl p-4 text-xs text-gray-400 flex items-start gap-3 hover:border-brandRed/20 transition-colors">
                 <span className="text-brandRed font-bold text-sm">0{sIdx+1}.</span>
                 <span>{step}</span>
               </div>
@@ -116,12 +115,14 @@ function TechHub() {
           <div className="w-20 h-1 bg-brandRed mx-auto mt-4"></div>
         </div>
 
+        {/* 3 Columns Layout with smooth hover transitions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech, tIdx) => (
-            <div key={tIdx} className="bg-techSurface border border-white/[0.02] rounded-2xl p-6 hover:border-brandRed/20 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center overflow-hidden mb-5 border border-white/5 p-2.5">
+            <div key={tIdx} className="bg-techSurface border border-white/[0.02] rounded-2xl p-6 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-brandRed/10 hover:border-brandRed/30 transition-all duration-300 group">
+              
+              {/* Upgraded High-Contrast White Background Box for pristine image visibility */}
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center overflow-hidden mb-5 shadow-lg p-2.5 transform group-hover:rotate-6 transition-transform duration-300">
                 
-                {/* Dynamic Conditional Rendering System checking icon asset types */}
                 {tech.type === "img" ? (
                   <img 
                     src={tech.src} 
@@ -129,14 +130,15 @@ function TechHub() {
                     className="max-h-full max-w-full object-contain" 
                   />
                 ) : (
-                  // Direct clean inline render execution path
-                  <div className="w-8 h-8 flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center">
                     {tech.src}
                   </div>
                 )}
 
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{tech.name}</h3>
+              
+              {/* Proper crisp typographic titles */}
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-techSky transition-colors">{tech.name}</h3>
               <p className="text-gray-400 text-xs leading-relaxed">{tech.desc}</p>
             </div>
           ))}
