@@ -50,7 +50,7 @@ function Testimonials() {
       company: "Travezee",
       src: "/travezeeT.png",
       review:
-        "Exceptional technical consulting and outsourcing capability. From secure database schemas to responsive web DOM structures, JAG Software delivers pure enterprise engineering excellence."
+        "The migration of our legacy systems into their modern web framework architecture was exceptionally flawless. The resource optimization metrics we achieve daily are phenomenal."
     }
   ];
 
