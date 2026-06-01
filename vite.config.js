@@ -10,6 +10,6 @@ export default defineConfig({
       usePolling: true, 
     },
     // Agar future me network access chahiye ho to host enable rakhein
-    host: true, 
+    host: false, 
   },
 })
